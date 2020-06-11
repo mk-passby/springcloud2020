@@ -27,14 +27,16 @@ public class PaymentController {
     private PaymentService paymentService;
     @Value("${server.port}")
     private String serverPort;
+
     @PostMapping("payment/create")
     public CommonResult createPayment(@RequestBody Payment payment) {
         log.info("创建payment----：{}", payment);
         int result = paymentService.create(payment);
         if (result > 0) {
-            return new CommonResult(HttpStatus.OK.value(), "插入成功,serverPort:"+serverPort);
+            return new CommonResult(HttpStatus.OK.value(), "插入成功, serverPort:" + serverPort);
         } else {
-            return new CommonResult(HttpStatus.BAD_REQUEST.value(), "插入失败,serverPort:"+serverPort);
+            return new CommonResult(HttpStatus.BAD_REQUEST.value(),
+                "插入失败, serverPort:" + serverPort);
         }
     }
 
@@ -45,7 +47,7 @@ public class PaymentController {
         if (payment != null) {
             return new CommonResult<>(HttpStatus.OK.value(), "查询数据成功,serverPort:"+serverPort, payment);
         } else {
-            return new CommonResult(HttpStatus.BAD_REQUEST.value(), "查询数据失败,serverPort:"+serverPort);
+            return new CommonResult(HttpStatus.BAD_REQUEST.value(), "查询数据失败, serverPort:"+serverPort);
         }
     }
 }
