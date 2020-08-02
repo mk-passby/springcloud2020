@@ -3,6 +3,7 @@ package com.bli.guigu.springcloud.controller;
 import com.bli.guigu.springcloud.entities.CommonResult;
 import com.bli.guigu.springcloud.entities.Payment;
 import com.bli.guigu.springcloud.service.PaymentService;
+import java.util.concurrent.TimeUnit;
 import javax.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
