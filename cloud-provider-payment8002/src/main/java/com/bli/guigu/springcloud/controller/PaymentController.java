@@ -50,4 +50,9 @@ public class PaymentController {
             return new CommonResult(HttpStatus.BAD_REQUEST.value(), "查询数据失败, serverPort:"+serverPort);
         }
     }
+
+    @GetMapping(value = "/payment/lb")
+    public String getPaymentLB() {
+        return "servePort:" + serverPort;
+    }
 }
