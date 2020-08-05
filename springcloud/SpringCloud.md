@@ -2064,7 +2064,7 @@ GlobalFilter,全局过滤器:
 
 ## SpringCloud Bus:
 
-![](.\图片\springconfig的26.png)
+![](/图片/springconfig的26.png)
 
 
 
