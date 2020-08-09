@@ -5,8 +5,9 @@ spring:
     name: cloud-payment-service
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource #当前数据源的操作类型
-    driver-class-name: org.gjt.mm.mysql.Driver #mysql驱动
-    url: jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    #mysql驱动(此处有一个小坑，教程的驱动为org.gjt.mm.mysql.Driver，但是mysql升级8.0.16jar后，不再兼容
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false
     username: root
     password: 33092250
 mybatis:
