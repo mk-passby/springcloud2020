@@ -1,8 +1,8 @@
 package com.bli.guigu.springcloud.config;
 
-import feign.Logger;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+    import feign.Logger;
+    import org.springframework.context.annotation.Bean;
+    import org.springframework.context.annotation.Configuration;
 
 /**
  * @program: springcloud2020

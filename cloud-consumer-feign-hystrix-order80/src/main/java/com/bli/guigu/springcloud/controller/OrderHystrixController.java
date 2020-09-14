@@ -34,13 +34,6 @@ public class OrderHystrixController {
         String result = paymentHystrixService.paymentInfo_OK(id);
         return result;
     }
-
-//    @GetMapping("/consumer/payment/hystrix/timeout/{id}")
-//    public String paymentInfo_TimeOut(@PathVariable("id") Integer id){
-//        String result = paymentHystrixService.paymentInfo_TimeOut(id);
-//        return result;
-//    }
-
     @GetMapping("/consumer/payment/hystrix/timeout/{id}")
 //    @HystrixCommand(fallbackMethod = "paymentTimeOutFallbackMethod",
 //        commandProperties = {
